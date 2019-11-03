@@ -53,8 +53,8 @@ $('[data-toggle="bcp"]')
 
 ## Options
 
-> As BCP uses in background the Bootstrap's popover component.  
-> You can pass any [popover option](https://getbootstrap.com/docs/4.3/components/popovers/#options) except following ones that are reserved : `html`, `sanitize`, `trigger`, `content`.
+> As BCP uses the Bootstrap's popover component in background, you can pass any [popover option](https://getbootstrap.com/docs/4.3/components/popovers/#options) 
+> except following ones that are reserved : `html`, `sanitize`, `trigger`, `content`.
 
 ### Plugin options
 
@@ -118,3 +118,70 @@ $.bcpSetup({
 });
 ```
 
+## Methods and events.
+
+> As BCP uses the Bootstrap's popover component in background, you can use any popover [original method](https://getbootstrap.com/docs/4.3/components/popovers/#methods) 
+> or [original event](https://getbootstrap.com/docs/4.3/components/popovers/#events) on a BCP element.
+
+BCP provide one method and two events.
+
+**color:**
+
+The `color` method allow to set / get the color of a component:
+
+```javascript
+// Set the color of a component.
+$('.my-bcp-element').bcp('color', '#ffff00');
+
+// Get the color of a component.
+console.log($('.my-bcp-element').bcp('color'));
+/* Shows:
+{
+    value: '#ffff00', // The hex code of the color
+    dark: false       // Wether the color is dark
+}
+*/
+```
+
+> When getting a component color, the `dark` information is usefull to ensure that foreground and background color combinations provide sufficient contrast when viewed by someone having color deficits or when viewed on a black and white screen.
+> See [https://www.w3.org/TR/AERT/#color-contrast]() for more informations.
+
+**pcb.refresh:**
+
+This event is fired when the BCP component is instanciated and when it's color changes.  
+It's the good place to manage it's impact on your application appearance.
+
+Example:
+
+```javascript
+// Change the color of the component based on it's value.
+$('.my-bcp-element').on('pcb.refresh', function (e) {
+    let color = $(this).bcp('color');
+    if (color.value) {
+        $(this).css({
+            backgroundColor: color.value,
+            borderColor: color.value,
+            color: color.dark ? '#fff' : '#000'
+        });
+    }
+});
+*/
+```
+
+**pcb.selected:**
+
+This event is fired when a color is selected in a BCP component.  
+It's the good place to manage the application logic.
+
+Example:
+
+```javascript
+// Change the color of the component based on it's value.
+$('.my-bcp-element').on('pcb.selected', function (e) {
+    let color = $(this).bcp('color');
+    if (color.value) {
+        $.post('my-url/', color);
+    }
+});
+*/
+```
