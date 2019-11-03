@@ -1,42 +1,44 @@
 .bcp-popover{
     max-width: none;
 
-    .bcp-content{
-        .bcp-row{
-            display: flex;
+    .bcp-row{
+        display: flex;
+    }
 
-            .bcp-color{
-                transition: all .1s ease-in-out;
-                position: relative;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                border: 1px solid #ddd;
-                margin: 5px;
-                cursor: pointer;
+    .bcp-color{
+        transition: all .1s ease-in-out;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        margin: 5px;
+        cursor: pointer;
 
-                &.light{
-                    color: #000;
-                }
+        &.bcp-light{
+            color: #000;
+        }
 
-                &.dark{
-                    color: #fff;
-                }
+        &.bcp-dark{
+            color: #fff;
+        }
 
-                &:hover, &.active{
-                    width: 30px;
-                    height: 30px;
-                    margin: 2px;
-                }
+        &:hover, &.bcp-active{
+            width: 30px;
+            height: 30px;
+            margin: 2px;
+        }
 
-                &.active:after{
-                    content: '\2713';
-                    position: absolute;
-                    top: 50%;;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(-50%);
-                    font-size: 28px;
-                }
+        &.bcp-active{
+            pointer-events: none;
+
+            &:after{
+                content: '\2713';
+                position: absolute;
+                top: 50%;;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                font-size: 28px;
             }
         }
     }

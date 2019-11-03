@@ -45,7 +45,7 @@
                 let tmp = '';
 
                 for (var color in row) {
-                    let cl = isColorDark(color) ? 'dark' : 'light';
+                    let cl = isColorDark(color) ? 'bcp-dark' : 'bcp-light';
                     tmp += `<div class="bcp-color ${cl}" style="background-color: ${color};" data-color="${color}" title="${row[color]}"></div>`;
                 }
 
@@ -109,7 +109,7 @@
         $(this).popover(settings).on('shown.bs.popover', function() {
             var color = $(this).attr('data-color');
             if (color && color !== '') {
-                $(`[data-color="${color}"]`, $($(this).data('bs.popover').tip)).addClass('active');
+                $(`[data-color="${color}"]`, $($(this).data('bs.popover').tip)).addClass('bcp-active');
             }
         });
 
@@ -140,9 +140,9 @@
         if ($e.is('.bcp-popover .bcp-color *')) {
             $e = $e.parents('.bcp-color');
         }
-        if ($e.is('.bcp-popover .bcp-color:not(.active)')) {
+        if ($e.is('.bcp-popover .bcp-color:not(.bcp-active)')) {
             let $p = $e.parents('.bcp-popover');
-            $('.active', $p).removeClass('active');
+            $('.bcp-active', $p).removeClass('bcp-active');
 
             let $b = $(`[aria-describedby="${$p.attr('id')}"]`);
             $b.popover('hide').bcp('color', $e.attr('data-color'));
