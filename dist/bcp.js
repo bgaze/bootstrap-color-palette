@@ -95,7 +95,6 @@
             sanitize: false,
             trigger: 'manual',
             content: function() {
-                console.log(settings.body(settings.colors));
                 return settings.body(settings.colors);
             }
         });
