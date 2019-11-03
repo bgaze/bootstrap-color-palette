@@ -81,7 +81,13 @@
                 dark: isColorDark($(this).first().attr('data-color') || null)
             };
         }
-
+        
+        // Remove reserved attributes.
+        $(this)
+                .removeAttr('data-html')
+                .removeAttr('data-sanitize')
+                .removeAttr('data-trigger')
+                .removeAttr('data-content');
 
         // Prepare popover configuration.
         var settings = $.extend({}, defaults, options);
