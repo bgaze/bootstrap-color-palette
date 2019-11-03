@@ -9,8 +9,8 @@ const cleanCSS = require('gulp-clean-css');
 
 // Files.
 const src = {
-    js: './src/bootstrap-color-picker.js',
-    css: './src/bootstrap-color-picker.scss'
+    js: './src/*.js',
+    css: './src/*.scss'
 };
 
 // Javascripts.
