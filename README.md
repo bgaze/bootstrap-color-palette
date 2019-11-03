@@ -45,9 +45,8 @@ $('.my-element').bcp();
 
 ### Initial color
 
-The component color is managed through it's `data-color` attribute, which is updated each time a new color is selected.
-
-Just use this attribute to set it's initial color, it will be updated each time a new color is selected.
+The component color is managed through it's `data-color` attribute, which is updated each time a new color is selected.  
+Just use this attribute to set it's initial color.
 
 ### Options
 
@@ -176,3 +175,9 @@ $('.my-bcp-element').on('pcb.selected', function (e) {
 });
 */
 ```
+
+## Component styling
+
+BCP inserts several classes prefixed with `bcp-` to ease component styling.
+
+Please see [default stylesheet](./src/bcp.scss) for more.
