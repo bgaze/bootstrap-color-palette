@@ -19,14 +19,14 @@ Several quick start options are available:
 
 ```
 // Core script and styles:
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.min.js
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.min.css
+https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.js
+https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.css
 
 // Default palette (english):
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.en.min.js
+https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.en.min.js
 
 // Default palette (french):
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.fr.min.js
+https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.fr.min.js
 ```
 
 Just make sure to include required dependencies into your app, then library's core files.  
