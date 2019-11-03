@@ -43,7 +43,7 @@ $('.my-element').bcp();
 > As BCP uses the Bootstrap's popover component in background, you can pass any [popover option](https://getbootstrap.com/docs/4.3/components/popovers/#options) 
 > via data attributes or JavaScript, except following ones that are reserved : `html`, `sanitize`, `trigger`, `content`.
 
-### Initial color.
+### Initial color
 
 The component color is managed through it's `data-color` attribute, which is updated each time a new color is selected.
 
@@ -70,8 +70,6 @@ The default value is:
 ```javascript
 '<div class="popover bcp-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
 ```
-
-> The `bcp-popover` class is used for the palette styling.
 
 **body:**
 
@@ -136,8 +134,8 @@ console.log($('.my-bcp-element').bcp('color'));
 */
 ```
 
-> When getting a component color, the `dark` information is usefull to ensure that foreground and background color combinations provide sufficient contrast when viewed by someone having color deficits or when viewed on a black and white screen.
-> See [https://www.w3.org/TR/AERT/#color-contrast]() for more informations.
+The `dark` information is usefull to ensure that foreground and background color combinations provide sufficient contrast when viewed by someone having color deficits or when viewed on a black and white screen.
+See [https://www.w3.org/TR/AERT/#color-contrast]() for more informations.
 
 **pcb.refresh:**
 
