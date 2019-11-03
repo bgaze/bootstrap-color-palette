@@ -29,13 +29,14 @@ https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.en.min.js
 https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.fr.min.js
 ```
 
-Just make sure to include required dependencies into your app, then library's core files, then use the `bcp` jQuery plugin:
+Just make sure to include required dependencies into your app, then library's core files.  
+If you don't include the optional default palette, you'll need to define your own to make the plugin work.
+
+Use the `bcp` jQuery plugin:
 
 ```javascript
 $('.my-element').bcp();
 ```
-
-> If you don't include the optional default palette, you'll need to define your own to make the plugin work.
 
 ## Options
 
