@@ -21,42 +21,34 @@ Several quick start options are available:
 // Core script and styles:
 https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.min.js
 https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.min.css
+
 // Default palette (english):
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.min.js
+https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.en.min.js
+
 // Default palette (french):
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.min.js
+https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palettes@1/dist/bcp.fr.min.js
 ```
 
-Just make sure to include required dependencies into your app, then library's core files.  
-If you don't include the optional default palette, you'll need to define your own to make the plugin work.
-
-Finally, use the `bcp` jQuery plugin:
+Just make sure to include required dependencies into your app, then library's core files, then use the `bcp` jQuery plugin:
 
 ```javascript
-$('[data-toggle="bcp"]')
-    .on('pcb.refresh', function (e) {
-        var color = $(this).bcp('color');
-        if (color.value) {
-            $(this).css({
-                backgroundColor: color.value,
-                borderColor: color.value,
-                color: color.dark ? '#fff' : '#000'
-            });
-        }
-    })
-    .on('pcb.selected', function (e) {
-        var color = $(this).bcp('color');
-        console.log(color);
-    })
-    .bcp();
+$('.my-element').bcp();
 ```
+
+> If you don't include the optional default palette, you'll need to define your own to make the plugin work.
 
 ## Options
 
 > As BCP uses the Bootstrap's popover component in background, you can pass any [popover option](https://getbootstrap.com/docs/4.3/components/popovers/#options) 
-> except following ones that are reserved : `html`, `sanitize`, `trigger`, `content`.
+> via data attributes or JavaScript, except following ones that are reserved : `html`, `sanitize`, `trigger`, `content`.
 
-### Plugin options
+### Initial color.
+
+The component color is managed through it's `data-color` attribute, which is updated each time a new color is selected.
+
+Just use this attribute to set it's initial color, it will be updated each time a new color is selected.
+
+### Options
 
 The plugin offers several options:
 
