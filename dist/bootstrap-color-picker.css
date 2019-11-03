@@ -1,0 +1,45 @@
+.bcp-popover {
+    max-width: none;
+}
+
+.bcp-popover .bcp-content .bcp-row {
+    display: -webkit-box;
+    display: flex;
+}
+
+.bcp-popover .bcp-content .bcp-row .bcp-color {
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #dadce0;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.bcp-popover .bcp-content .bcp-row .bcp-color.light {
+    color: #000;
+}
+
+.bcp-popover .bcp-content .bcp-row .bcp-color.dark {
+    color: #fff;
+}
+
+.bcp-popover .bcp-content .bcp-row .bcp-color:hover,
+.bcp-popover .bcp-content .bcp-row .bcp-color.active {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.bcp-popover .bcp-content .bcp-row .bcp-color.active:after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 28px;
+}

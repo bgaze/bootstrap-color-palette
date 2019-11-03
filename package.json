@@ -1,0 +1,28 @@
+{
+  "name": "bootstrap-color-picker",
+  "version": "1.0.0",
+  "description": "A simple Google flavored color picker for Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgaze/bootstrap-color-picker.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bgaze/bootstrap-color-picker/issues"
+  },
+  "homepage": "https://github.com/bgaze/bootstrap-color-picker#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-beautify": "^3.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0"
+  }
+}
