@@ -24,6 +24,10 @@ Several methods are available:
 [https://github.com/bgaze/bootstrap-color-palette/releases](https://github.com/bgaze/bootstrap-color-palette/releases)
 *   Clone the repo:  
 `git clone https://github.com/bgaze/bootstrap-color-palette.git`
+*   Install with npm:
+`npm i bgaze-bootstrap-color-palette`
+*   Install with yarn:
+`yarn add bgaze-bootstrap-color-palette`
 *   Install via CDN: 
     *   Core script and styles:  
 `https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.js`  
@@ -33,9 +37,9 @@ Several methods are available:
     *   Default palette (french):  
 `https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.fr.min.js`
 
-BCP requires jQuery v1.9.1+, Bootstrap 4 modal component, and Bootstrap's CSS.  
-Just make sure to include required dependencies into your app, then library's core files.
+BCP requires jQuery v1.9.1+, Bootstrap 4 modal component, and Bootstrap's CSS.
 
+Just make sure to import required dependencies, then library's core files.  
 If you don't include the optional default palette, you'll need to define your own to make the plugin work.
 
 ## Usage

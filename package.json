@@ -1,21 +1,26 @@
 {
-  "name": "bootstrap-color-picker",
-  "version": "1.0.0",
-  "description": "A simple Google flavored color picker for Bootstrap 4",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bgaze/bootstrap-color-picker.git"
-  },
-  "author": "",
+  "name": "bootstrap-color-palette",
+  "version": "1.1.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bgaze/bootstrap-color-picker/issues"
+  "description": "A simple color palette for Bootstrap 4, like in Google doc",
+  "author": {
+    "name": "Benjamin Gazé",
+    "email": "benjamin@bgaze.fr",
+    "url": "https://www.bgaze.fr"
   },
-  "homepage": "https://github.com/bgaze/bootstrap-color-picker#readme",
+  "keywords": [
+    "bootstrap",
+    "color",
+    "palette"
+  ],
+  "repository": "github:bgaze/bootstrap-color-palette",
+  "bugs": "https://github.com/bgaze/bootstrap-color-palette/issues",
+  "homepage": "https://www.bgaze.fr/bootstrap-color-palette",
+  "main": "dist/bcp.js",
+  "peerDependencies": {
+    "jquery": ">=1.9",
+    "bootstrap": "~4.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
