@@ -1,4 +1,4 @@
-# Bootstrap 4 Color Palette
+# Bootstrap 4 Color Palette <!-- omit in toc -->
 
 <p align="center">
     <img src="bcp.gif">
@@ -7,35 +7,69 @@
 BCP is a simple color palette for Bootstrap 4, like in Google doc.  
 It's built on the top of Bootstrap 4 Popover plugin.
 
-## Quick start
+- [Installation](#installation)
+- [Usage](#usage)
+- [Options](#options)
+  - [Initial color](#initial-color)
+  - [BCP options](#bcp-options)
+  - [Global configuration](#global-configuration)
+- [Methods and events.](#methods-and-events)
+- [Component styling](#component-styling)
 
-BSD requires jQuery v1.9.1+, Bootstrap 4 modal component, and Bootstrap's CSS.
+## Installation
 
-Several quick start options are available:
+Several methods are available:
 
-*   Download the latest release: [https://github.com/bgaze/bootstrap-color-palette/releases](https://github.com/bgaze/bootstrap-color-palette/releases)
-*   Clone the repo: `git clone https://github.com/bgaze/bootstrap-color-palette.git`
+*   Download the latest release:  
+[https://github.com/bgaze/bootstrap-color-palette/releases](https://github.com/bgaze/bootstrap-color-palette/releases)
+*   Clone the repo:  
+`git clone https://github.com/bgaze/bootstrap-color-palette.git`
 *   Install via CDN: 
+    *   Core script and styles:  
+`https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.js`  
+`https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.css`
+    *   Default palette (english):  
+`https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.en.min.js`
+    *   Default palette (french):  
+`https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.fr.min.js`
 
-```
-// Core script and styles:
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.js
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.css
+BCP requires jQuery v1.9.1+, Bootstrap 4 modal component, and Bootstrap's CSS.  
+Just make sure to include required dependencies into your app, then library's core files.
 
-// Default palette (english):
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.en.min.js
-
-// Default palette (french):
-https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.fr.min.js
-```
-
-Just make sure to include required dependencies into your app, then library's core files.  
 If you don't include the optional default palette, you'll need to define your own to make the plugin work.
 
-Use the `bcp` jQuery plugin:
+## Usage
+
+Here is an example of how to use BCP:
 
 ```javascript
-$('.my-element').bcp();
+    // Configure globally if needed.
+    $.bcpSetup({
+        placement: 'left'
+    });
+
+    // Init color palette components.
+    $('[data-toggle="bcp"]')
+        // On refresh, use the color for background and borders.
+        // Adapt text color based on selected color brightness.
+        .on('pcb.refresh', function (e) {
+            let color = $(this).bcp('color');
+            if (color.value) {
+                $(this).css({
+                    backgroundColor: color.value,
+                    borderColor: color.value,
+                    color: color.dark ? '#fff' : '#000'
+                });
+            }
+        })
+        // On color selection, log selected color to the console.
+        .on('pcb.selected', function (e) {
+            let color = $(this).bcp('color');
+            console.log(color);
+        })
+        // Init components.
+        // You can pass an options object to override global configuration.
+        .bcp()
 ```
 
 ## Options
@@ -46,9 +80,9 @@ $('.my-element').bcp();
 ### Initial color
 
 The component color is managed through it's `data-color` attribute, which is updated each time a new color is selected.  
-Just use this attribute to set it's initial color.
+Use this attribute with markup or javascript to set initial color.
 
-### Options
+### BCP options
 
 The plugin offers several options:
 
@@ -139,7 +173,7 @@ See [https://www.w3.org/TR/AERT/#color-contrast]() for more informations.
 **pcb.refresh:**
 
 This event is fired when the BCP component is instanciated and when it's color changes.  
-It's the good place to manage it's impact on your application appearance.
+It's the good place to manage BCP impact on your application appearance.
 
 Example:
 

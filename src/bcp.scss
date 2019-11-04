@@ -1,11 +1,11 @@
-.bcp-popover{
+.bcp-popover {
     max-width: none;
 
-    .bcp-row{
+    .bcp-row {
         display: flex;
     }
 
-    .bcp-color{
+    .bcp-color {
         transition: all .1s ease-in-out;
         position: relative;
         width: 24px;
@@ -15,27 +15,28 @@
         margin: 5px;
         cursor: pointer;
 
-        &.bcp-light{
+        &.bcp-light {
             color: #000;
         }
 
-        &.bcp-dark{
+        &.bcp-dark {
             color: #fff;
         }
 
-        &:hover, &.bcp-active{
+        &:hover,
+        &.bcp-active {
             width: 30px;
             height: 30px;
             margin: 2px;
         }
 
-        &.bcp-active{
+        &.bcp-active {
             pointer-events: none;
 
-            &:after{
+            &:after {
                 content: '\2713';
                 position: absolute;
-                top: 50%;;
+                top: 50%;
                 left: 50%;
                 transform: translateX(-50%) translateY(-50%);
                 font-size: 28px;
