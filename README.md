@@ -25,9 +25,9 @@ Several methods are available:
 *   Clone the repo:  
 `git clone https://github.com/bgaze/bootstrap-color-palette.git`
 *   Install with npm:
-`npm i bgaze-bootstrap-color-palette`
+`npm i bootstrap-color-palette`
 *   Install with yarn:
-`yarn add bgaze-bootstrap-color-palette`
+`yarn add bootstrap-color-palette`
 *   Install via CDN: 
     *   Core script and styles:  
 `https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.min.js`  
