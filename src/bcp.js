@@ -38,6 +38,22 @@
             return (result <= 125);
         };
 
+        var getColorLabel = ($el, color) => {
+            var colors = $el.data('bs.popover').config.colors || null;
+
+            if (colors && color) {
+                for (var line in colors) {
+                    for (var col in colors[line]) {
+                        if (col === color) {
+                            return colors[line][col];
+                        }
+                    }
+                }
+            }
+
+            return null;
+        };
+
         /*
          * DEFAULT OPTIONS 
          */
@@ -85,18 +101,20 @@
                 }
 
                 // Get.
+                let color = $(this).first().attr('data-color') || null;
                 return {
-                    value: $(this).first().attr('data-color') || null,
-                    dark: isColorDark($(this).first().attr('data-color') || null)
+                    value: color,
+                    label: getColorLabel($(this).first(), color),
+                    dark: isColorDark(color)
                 };
             }
 
             // Remove reserved attributes.
             $(this)
-                .removeAttr('data-html')
-                .removeAttr('data-sanitize')
-                .removeAttr('data-trigger')
-                .removeAttr('data-content');
+                    .removeAttr('data-html')
+                    .removeAttr('data-sanitize')
+                    .removeAttr('data-trigger')
+                    .removeAttr('data-content');
 
             // Prepare popover configuration.
             var settings = $.extend({}, defaults, options);

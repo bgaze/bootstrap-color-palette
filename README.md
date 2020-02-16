@@ -166,13 +166,14 @@ console.log($('.my-bcp-element').bcp('color'));
 /* Shows:
 {
     value: '#ffff00', // The hex code of the color
+    label: 'Red',     // The label of the color
     dark: false       // Wether the color is dark
 }
 */
 ```
 
-The `dark` information is usefull to ensure that foreground and background color combinations provide sufficient contrast when viewed by someone having color deficits or when viewed on a black and white screen.
-See [https://www.w3.org/TR/AERT/#color-contrast]() for more informations.
+The `dark` information is usefull to ensure that foreground and background color combinations provide sufficient contrast when viewed by someone having color deficits or when viewed on a black and white screen.  
+See [https://www.w3.org/TR/AERT/#color-contrast](https://www.w3.org/TR/AERT/#color-contrast) for more informations.
 
 **pcb.refresh:**
 
