@@ -5,18 +5,15 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/bgaze/bootstrap-color-palette)](https://github.com/bgaze/bootstrap-color-palette/releases) 
 [![npm](https://img.shields.io/npm/dt/bootstrap-color-palette)](https://www.npmjs.com/package/bootstrap-color-palette)
 
-<p align="center">
-    <img src="./bcp.gif">
-</p>
+![bootstrap-color-palette](./bcp.gif)
 
-BCP is a simple color palette for Bootstrap 4, like in Google doc,
-built on the top of Bootstrap 4 Popover plugin.
+BCP is a simple color palette for Bootstrap 4, like in Google doc, built on the top of Bootstrap 4 Popover plugin.
 
 ## Documentation
 
 Full documentation and examples are available at [https://packages.bgaze.fr/bootstrap-color-palette](https://packages.bgaze.fr/bootstrap-color-palette)
 
-## Installation
+## Quick start
 
 BCP requires jQuery v1.9.1+, Bootstrap 4 popover component, and Bootstrap's CSS.
 
@@ -46,20 +43,12 @@ Core CSS: `https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.
 Default palette (english): `https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.en.min.js`  
 Default palette (french): `https://cdn.jsdelivr.net/gh/bgaze/bootstrap-color-palette@1/dist/bcp.fr.min.js`
 
-**From Github:**
-
-Download the latest release: `https://github.com/bgaze/bootstrap-color-palette/releases`  
-Or clone the repo: `git clone https://github.com/bgaze/bootstrap-color-palette.git`
-
-## Usage
+**Usage:**
 
 * Use `data-color` attribute via Javascript or HTML to define component initial color.
-* Use `pcb.refresh` event to manage impact on your application appearance.  
-You should define this callback before instantiating the component to make sure it is called on page load.
-* Use `pcb.selected` event to define your callback on color change.  
-It's the good place to manage BCP impact on your application appearance.
-* Use `bcp` jQuery plugin to instantiate your component(s).  
-You can pass a set of options to override global configuration.
+* Use `pcb.refresh` event to manage impact on your application appearance.
+* Use `pcb.selected` event to define your callback on color change.
+* Use `bcp` jQuery plugin to instantiate your component(s).
 * The `color` method allows to set/get programmatically a component color.
 
 ```javascript
