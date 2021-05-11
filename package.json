@@ -18,8 +18,8 @@
   "homepage": "https://www.bgaze.fr/bootstrap-color-palette",
   "main": "dist/bcp.js",
   "peerDependencies": {
-    "jquery": ">=1.9",
-    "bootstrap": "~4.0"
+    "bootstrap": "^4.0.0",
+    "jquery": ">=1.9"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
