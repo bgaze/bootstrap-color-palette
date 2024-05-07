@@ -141,7 +141,7 @@
             });
 
             // Open popover on element click.
-            $(this).click(function () {
+            $(this).on("click", function () {
                 $(this).popover('toggle');
             });
 
